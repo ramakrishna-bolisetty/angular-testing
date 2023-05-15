@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/user';
 import { UserService } from 'src/user.service';
-
+import { DETAILS } from 'src/config';
 @Component({
   selector: 'app-manage-user',
   templateUrl: './manage-user.component.html',
@@ -10,7 +10,7 @@ import { UserService } from 'src/user.service';
 })
 export class ManageUserComponent {
   users: User[] = [];
-  btnName = "Details";
+  btnName = DETAILS;
 
   constructor(public userService: UserService, private router: Router, private route: ActivatedRoute) {
 
